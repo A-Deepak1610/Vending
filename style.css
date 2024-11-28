@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 .heading{
     font-family: "Dancing Script", cursive;
     font-style: normal;
@@ -15,7 +18,7 @@ header{
     display: flex;
     justify-content: space-between;
 }
-.cart{
+.cart,.cartt{
     cursor: pointer;
     color:#ffff;
     background-color: rgb(12, 131, 31);
@@ -25,6 +28,21 @@ header{
     margin-right: 2rem;
     border-radius: 5px  ;
     border: none;
+}
+.fa-angles-right{
+    margin-right: 25px;
+    font-size: 30px;
+    color: #0c0b0b;
+}
+.fa-angles-left{
+    font-size: 30px;
+    color: #0c0b0b;
+}
+.cartt{
+    
+    margin-bottom: 5px;
+    background-color: rgb(105, 5, 151);
+    width: 140px;
 }
 .cart:hover{
     scale: 1.04;
@@ -99,7 +117,9 @@ header{
     margin-right: 20px;
 }
 .empty{
-    height: 40vh;
+    display: flex;
+    justify-content: center;
+    height: 20vh;
 }
 .cartbox{
     margin-left:79%;
@@ -155,4 +175,8 @@ header{
     width:30px;
     height:20px;
     border-radius: 7px;
+}
+#noitems,#noitemss{
+    font-size: 20px;
+    color: orange;
 }
