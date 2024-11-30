@@ -3,7 +3,7 @@
     padding: 0;
 }
 html{
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 .heading{
     font-family: "Dancing Script", cursive;
@@ -18,7 +18,18 @@ header{
     display: flex;
     justify-content: space-between;
 }
-.cart,.cartt{
+.cart{
+    cursor: pointer;
+    color:#ffff;
+    background-color: rgb(12, 131, 31);
+    height:52px;
+    width:112px;
+    margin-top:1.8rem;
+    margin-right: 2rem;
+    border-radius: 5px  ;
+    border: none;
+}
+.cartt{
     cursor: pointer;
     color:#ffff;
     background-color: rgb(12, 131, 31);
@@ -41,7 +52,7 @@ header{
 .cartt{
     
     margin-bottom: 5px;
-    background-color: rgb(105, 5, 151);
+    background-color: rgb(241, 81, 206);
     width: 140px;
 }
 .cart:hover{
@@ -119,20 +130,22 @@ header{
 .empty{
     display: flex;
     justify-content: center;
-    height: 20vh;
+    /* height: 20vh; */
 }
-.cartbox{
-    margin-left:79%;
-    position: absolute;
-    /* position: sticky; */
-    border: 2px solid #7b7777;
-    width:20%;
-    margin-top: 10px;
-    height:38rem;
-    /* z-index:-1; */
-    visibility:hidden;
-    background-color: #878787bb; 
+.summa{
+    height: 50hvh;
 }
+.yourcart{
+    font-size: 30px;
+    margin-top: 5px;
+    margin-left:46%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* .horizondal{
+    display: inline;
+} */
 .exit{
     cursor: pointer;
     margin: 5px;
@@ -162,7 +175,6 @@ header{
 .minus:hover, .plus:hover {
     scale: 1.1;
 }
-
 #quantitytemptations,#quantityrost,#quantitykitkat,#quantitymilkybar,#quantitylays,#quantityrost,#quantitypringles,#quantitykerelachips,#quantitykurkure,#quantitypepsi,#quantitypulpy,#quantitypomegranate,#quantityvanilla{
     display: flex;
     justify-content: center;
@@ -179,4 +191,58 @@ header{
 #noitems,#noitemss{
     font-size: 20px;
     color: orange;
+}
+.fa-angles-right{
+    animation: arrow-move 2s infinite;
+}
+.cartbox{
+    margin-left:5px;
+    /* position: absolute; */
+    border: 2px solid #efafaf;
+    border-radius: 5px;
+    width:99%;
+    margin-top: 10px;
+    height:50vh;
+    visibility:hidden;
+    background-color: rgb(237, 234, 234); 
+    color: #333;
+}
+li{
+    list-style-type: none;
+}
+.cartinside{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    color: #0243f4;
+}
+.selectedproduct,.selectedproduct2,.selectedproduct3,.selectedproduct4,.selectedproduct5,.selectedproduct6,.selectedproduct7,.selectedproduct8,.selectedproduct9,.selectedproduct9,.selectedproduct10,.selectedproduct11,.selectedproduct12,.selectedproduct10,.selectedproduct11,.selectedproduct12,.selectedproduct13{
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    width: 100%;
+    margin: 10px;
+    height:20vh; 
+}
+.selectedproducts{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto !important;
+}
+.summa{
+    color: #fff;
+    height: 20vh;
+}
+.bill{
+    text-align: center;
+}
+.total{
+    text-align: center;
+}
+.buynowbutton{
+    display: flex;
+    justify-content: center;
 }

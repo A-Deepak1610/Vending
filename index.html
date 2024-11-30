@@ -22,9 +22,8 @@
 <body>
     <header>
         <h1 class="heading">The Vending Spot</h1>
-        <button class="cart" onclick="cart()"> <i class="fa-solid fa-cart-shopping"></i><span id="noitems"> </span> My Cart</button>
+       <a href="#cartbox"> <button class="cart" onclick="cart(event);buynow()"> <i class="fa-solid fa-cart-shopping"></i><span id="noitems"> </span> My Cart</button></a>
     </header>
-    <div class="cartbox" id="cartbox"><button class="exit" onclick="exit()"><i class="fa-regular fa-circle-xmark"></i></button></div>
     <div class="products">
         <div class="product1"><img src="img/temptaion.png" class="iproduct1"  title="Cadbury Temptations">
         <div class="text"><p>Cadbury Temptations Rum & Raisins  Chocolate Bar, 72g</p ><p class="prize">₹109</p></div>
@@ -82,13 +81,19 @@
             <p class="stock">Stock:<span id="stock11">10</span</p>
             <div class="addbutton"><button class="add" id="addpomegranate" onclick="addpomegranate()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div></div> 
         <div class="product4"><img src="img/milkshake.webp" class="iproduct1" title="Milkshake" alt="">
-            <div class="text"><p>Sunfeast Vanilla Milkshake, Creamy & Smooth Milkshake </p ><p class="prize">₹10</p></div>
+            <div class="text"><p>Sunfeast Vanilla Milkshake, Creamy & Smooth Milkshake </p ><p class="prize">₹32</p></div>
             <p class="stock">Stock:<span id="stock12">10</span</p>
             <div class="addbutton"><button class="add" id="addvanilla" onclick="addvanilla()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div></div> 
     </div>
     <div class="empty">
-        
-        <a href="#"><!--<i class="fa-solid fa-angles-right" onclick="cart()"></i>--><button class="cartt" onclick="cart()">  <i class="fa-solid fa-cart-shopping"></i> <span id="noitemss"></span> CHECKOUT</button></a>
+        </i><button class="cartt" onclick="cartt();buynow()">  <i class="fa-solid fa-cart-shopping"></i> <span id="noitemss"></span> CHECKOUT</button>
     </div>
+    <div class="cartbox" id="cartbox"> <nav><span class="yourcart">Your Cart</span><button class="exit" onclick="exit()"><i class="fa-regular fa-circle-xmark"></i></button></nav>
+        <div class="horizondal"><ul id="selectedproducts" class="selectedproducts"></ul>
+        <h1 class="bill">Bill Sumarry</h1><p class="total" id="total"></p>
+    <div class="buynowbutton"><button class="buynoww">Buy Now</button></div></div>
+    </div>
+
+    <div class="summa"></div>
 </body>
 </html> 
