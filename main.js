@@ -891,13 +891,14 @@ function timer(){
   if(a>0){
     closecash.textContent=`Close(${a})`
   }
-  else(
+  else{
     paymentscash()
-  )
+}
 }
 function paymentscash(){
   var cashpage=document.getElementById("cashpage")
   cashpage.style.visibility="hidden"
+  window.location.reload();
 }
 function gpay(){  
   var gpaypage=document.getElementById("gpaypage")
