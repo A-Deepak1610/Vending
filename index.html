@@ -91,9 +91,32 @@
     <div class="cartbox" id="cartbox"> <nav><span class="yourcart">Your Cart</span><button class="exit" onclick="exit()"><i class="fa-regular fa-circle-xmark"></i></button></nav>
         <div class="horizondal"><ul id="selectedproducts" class="selectedproducts"></ul>
         <h1 class="bill">Bill Sumarry</h1><p class="total" id="total"></p>
-    <div class="buynowbutton"><button class="buynoww">Buy Now</button></div></div>
+        <div class="buynowbutton"><button class="clear" onclick="clearr()"><img src="img/clear-filter (1).png" class="clearimg" alt="">CLEAR</button><button class="buynoww" onclick="payments();discount()">Buy Now</button></div></div>
     </div>
+    <div class="payments" id="payments"><span class="payment">Payments</span><button class="exit" onclick="exitpayments()"><i class="fa-regular fa-circle-xmark"></i></button>
+    <p class="totalamt" id="totalamt">Total Amount:₹<p class="Do">Do you have Discount code?</p>
+    <div class="discount"><input type="text" class="inputdiscount" id="inputdiscount" placeholder="Enter Discount Code">
+    <button class="apply" onclick="discount()">Apply</button></div>
+    <p class="discounted" id="discounted"></p>
+    <p class="finalprice" id="finalprice"></p>
+    <div class="payoption">
+    <button class="cash" onclick="cash()"><img src="img/dollar.png" alt="" class="cashicon">CASH</button><button class="gpay" onclick="gpay()"><img src="img/pngwing.com.png" alt="" class="gpayicon">GPAY</button></div>
+    </div>
+    <div class="cashpage" id="cashpage"><div class="thankyou" id="thankyou"><p class="cashheading"><img src="img/correct.png.png" alt="" class="correct">All Products Dispensed!</p>
+    <p class="thank">Thanks for shopping with us.Have a nice day!</p><div class="rating"><p class="rate">Rate your experience</p>
+    <div class="stars"><center>
+        <button id="star1" onclick="star1('star1')"><i class="fa-regular fa-star"></i></button>
+        <button id="star2" onclick="star1('star2')" ><i class="fa-regular fa-star"></i></button>
+        <button id="star3"onclick="star1('star3')" ><i class="fa-regular fa-star"></i></button>
+        <button id="star4"onclick="star1('star4')" ><i class="fa-regular fa-star"></i></button>
+        <button id="star5"onclick="star1('star5')" ><i class="fa-regular fa-star"></i></button></center></div>
+       </div> <center><button class="closecash" id="closecash" onclick="paymentscash()">Close</button></center></div>
 
+    <p class="load" id="load">Loading</p><span class="loading" id="loading"></span>
+    </div>
+    <div class="gpaypage" id="gpaypage"><h1 class="scan">Scan the Qr code</h1>
+    <center><img src="img/gpayqrcode-removebg-preview.png" alt="" title="qrcode" class="qrcode"></center>
+    <button class="closegay" id="closegpayqrcode" onclick="paymentscash()">Pay with in (5)</button></div>
     <div class="summa"></div>
 </body>
 </html> 

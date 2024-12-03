@@ -709,10 +709,225 @@ function addproduct12(){
     }
     else if(vanilla==0){
     selectedproduct13.remove()
-  }
+  } 
 }
 function buynow(){
   let totalprice=quantity1*109+quantity2*152+quantity3*70+quantity4*35+quantity5*20+quantity6*170+quantity7*70+quantity8*10+quantity9*150+quantity10*66+quantity11*111+quantity12*32;
+  if(totalprice==0){
+    document.getElementById("cartbox").style.visibility = "hidden";
+  }
+  else{
   var total=document.getElementById("total")
   total.innerHTML=`Total:₹${totalprice}`
+  totalamt=document.getElementById("totalamt")
+  totalamt.innerHTML=`Amount:₹${totalprice}`
+  let beforediscount=quantity1*109+quantity2*152+quantity3*70+quantity4*35+quantity5*20+quantity6*170+quantity7*70+quantity8*10+quantity9*150+quantity10*66+quantity11*111+quantity12*32;
+  var finalprice=document.getElementById("finalprice")
+  finalprice.innerHTML=`Total Amount:₹${beforediscount}`
+  }
 }
+function payments(){
+  var payments=document.getElementById("payments")
+  payments.style.visibility = "inherit"
+  document.documentElement.scrollTop = 0
+  let beforediscount=quantity1*109+quantity2*152+quantity3*70+quantity4*35+quantity5*20+quantity6*170+quantity7*70+quantity8*10+quantity9*150+quantity10*66+quantity11*111+quantity12*32;
+   var finalprice=document.getElementById("finalprice")
+  finalprice.innerHTML=`Total Amount:₹${beforediscount}`
+}
+function exitpayments(){
+  var payments=document.getElementById("payments")
+  payments.style.visibility = "hidden" 
+}
+function discount(){
+  let beforediscount=quantity1*109+quantity2*152+quantity3*70+quantity4*35+quantity5*20+quantity6*170+quantity7*70+quantity8*10+quantity9*150+quantity10*66+quantity11*111+quantity12*32;
+  var input=document.getElementById("inputdiscount").value
+  var finalprice=document.getElementById("finalprice")
+  finalprice.innerHTML=`Total Amount:₹${beforediscount}`
+  if (input === "DISCOUNT30" || input === "discount30") {
+    var discountedprice=beforediscount-(beforediscount*0.30)
+    discountedprice=Math.round(discountedprice)
+    var discounted=document.getElementById("discounted")
+    var finalprice=document.getElementById("finalprice")
+    discounted.style.color="green"
+    discounted.innerHTML='Congratulations! You saved 30% on your order'
+    document.getElementById("inputdiscount").value=''
+    finalprice.innerHTML=`Total Amount:₹${discountedprice}`
+  }
+  else if(input==''){
+    var discounted=document.getElementById("discounted")
+    discounted.innerHTML=''
+  }
+  else{
+    var discounted=document.getElementById("discounted")
+    discounted.style.color="red"
+    discounted.innerHTML="Sorry!discounted code had experied"
+    document.getElementById("inputdiscount").value=''
+  }
+}
+function clearr() {
+  window.location.reload();
+}
+window.onload = function() {
+  window.scrollTo(0,0)
+}
+
+function cash(){
+  exitpayments()
+  var cashpage=document.getElementById("cashpage")
+  cashpage.style.visibility="inherit"
+  // setTimeout(exitloading,4000)
+  setTimeout(load,1000)
+  setTimeout(load1,2000)
+  setTimeout(load2,3000)
+  setTimeout(thankyou,4000)
+  setInterval(timer,1000)
+}
+function exitloading(){
+  var loading=document.getElementById("loading")
+  loading.style.visibility="hidden"
+}
+function load(){
+  var load=document.getElementById("load")
+  load.textContent="Loading."
+}
+function load1(){
+  var load=document.getElementById("load")
+  load.textContent="Loading.."
+}
+function load2(){
+  var load=document.getElementById("load")
+  load.textContent="Loading..."
+}
+function thankyou(){
+  var load=document.getElementById("load")
+  load.style.visibility="hidden"
+  var loading=document.getElementById("loading")
+  loading.style.visibility="hidden"
+  var thankyou=document.getElementById("thankyou")
+  thankyou.style.visibility="inherit"
+}
+function star1(star){
+  var star1=document.getElementById("star1")
+  var star2=document.getElementById("star2")
+  var star3=document.getElementById("star3")
+  var star4=document.getElementById("star4")
+  var star5=document.getElementById("star5")
+  if(star=='star1'){
+    if(star1.innerHTML==`<i class="fa-solid fa-star" id="starfilled"></i>`){
+      star1.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star2.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star3.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star4.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star5.innerHTML=`<i class="fa-regular fa-star"></i>`
+    }
+    else{
+       star1.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+       
+    }
+  }
+  else if(star=='star2'){
+    if(star2.innerHTML==`<i class="fa-regular fa-star"></i>`){
+    star1.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    star2.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    }
+    else{
+      star1.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star2.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star3.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star4.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star5.innerHTML=`<i class="fa-regular fa-star"></i>`
+    }
+  }
+  else if(star=='star3'){
+    if(star3.innerHTML==`<i class="fa-regular fa-star"></i>`){
+    star1.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    star2.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    star3.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    }
+    else{
+      star1.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star2.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star3.innerHTML=`<i class="fa-regular fa-star"></i>`
+       star4.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star5.innerHTML=`<i class="fa-regular fa-star"></i>`
+    }
+  }
+  else if(star=='star4'){
+    if(star4.innerHTML==`<i class="fa-regular fa-star"></i>`){
+    star1.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    star2.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    star3.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    star4.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    }
+    else{
+      star1.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star2.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star3.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star4.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star5.innerHTML=`<i class="fa-regular fa-star"></i>`
+    }
+  }  else if(star=='star5'){
+    if(star4.innerHTML==`<i class="fa-regular fa-star"></i>`){
+    star1.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    star2.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    star3.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    star4.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    star5.innerHTML=`<i class="fa-solid fa-star" id="starfilled"></i>`
+    }
+    else{
+      star1.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star2.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star3.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star4.innerHTML=`<i class="fa-regular fa-star"></i>`
+      star5.innerHTML=`<i class="fa-regular fa-star"></i>`
+    }
+  }
+  
+}
+let a=34
+function timer(){
+  var closecash=document.getElementById("closecash")
+  a--
+  if(a>0){
+    closecash.textContent=`Close(${a})`
+  }
+  else(
+    paymentscash()
+  )
+}
+function paymentscash(){
+  var cashpage=document.getElementById("cashpage")
+  cashpage.style.visibility="hidden"
+}
+function gpay(){  
+  var gpaypage=document.getElementById("gpaypage")
+  gpaypage.style.visibility="inherit"
+  exitpayments()
+  setInterval(paywithin,1000)
+  setInterval(gpaythanks,5000)
+}
+let b=5
+let c=-1
+function paywithin(){
+  var closegpayqrcode=document.getElementById("closegpayqrcode")
+  b--
+  c++
+  if(b>=0){
+    closegpayqrcode.textContent=`Pay with in (${b})`
+  }
+
+}
+function gpaythanks(){
+  var gpaypage=document.getElementById("gpaypage")
+  gpaypage.style.visibility="hidden"
+  var cashpage=document.getElementById("cashpage")
+  cashpage.style.visibility="inherit"
+  // setTimeout(exitloading,4000)
+  setTimeout(load,1000)
+  setTimeout(load1,2000)
+  setTimeout(load2,3000)
+  setTimeout(thankyou,4000)
+  setInterval(timer,1000)
+}
+
+

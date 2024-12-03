@@ -198,11 +198,11 @@ header{
 .cartbox{
     margin-left:5px;
     /* position: absolute; */
-    border: 2px solid #efafaf;
+    border: 2px solid #b6b6b6;
     border-radius: 5px;
     width:99%;
     margin-top: 10px;
-    height:50vh;
+    height:55vh;
     visibility:hidden;
     background-color: rgb(237, 234, 234); 
     color: #333;
@@ -238,11 +238,321 @@ li{
 }
 .bill{
     text-align: center;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 35px;
 }
 .total{
     text-align: center;
+    font-family: "Roboto", serif;
+    /* font-weight: 300; */
+    font-size:30px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #f00;
+    font-size: 18px;
 }
 .buynowbutton{
     display: flex;
     justify-content: center;
+}
+
+.buynoww{
+    font-size: 20px;
+    width: 112px;
+    height: 52px;
+    border: none;
+    color: white;
+    background-color: #333;
+    border-radius: 10px;
+    margin-top:20px;
+    cursor: pointer;
+}
+.buynoww:hover{
+    background-color: #1e1e1e;
+}
+.payments{
+    top: 0;
+    left: 26.5%;
+    margin-top: 9%;
+    position: absolute;
+    background-color:#f2f2f2;
+    width:50% ;
+    height:60vh;
+    visibility:hidden;
+    border-radius: 15px;
+    border: rgb(0, 0, 0) 1px solid;
+    position: fixed; 
+
+}
+.payment{
+    margin-left:37%;
+    font-family: "Roboto", serif;
+    color: #007bff;
+    font-size: 45px;
+    margin-top: 5px;
+    /* font-weight: 500; */
+}
+.totalamt{
+    margin-top:1.5rem;
+    text-align: center;
+    font-size: 35px;
+    font-family:"Roboto";
+}
+.discount,.payoption{
+    display: flex;
+    justify-content: center;
+}
+.Do{
+    text-align: center;
+    font-family: "Roboto", serif;
+    font-size:20px;
+    margin-top: 3vh;
+}
+.inputdiscount{
+    margin-top: 3vh;
+    width: 25rem;
+    height: 4vh;
+    border-radius:7px;
+}
+.gpayicon{
+    width:30px;
+    height:30px;
+} 
+.gpay{
+    font-size: 30px;
+    margin-top: 3vw;
+    border: none;
+    cursor: pointer;
+}
+.cash {
+    font-size: 30px;
+    margin-top: 3vw;
+    border: none;
+    display: flex; 
+    align-items: center; 
+    margin-right: 35px;
+    cursor: pointer;
+  }
+  .cash:hover,.gpay:hover,.apply:hover{
+    scale: 1.08;
+  }
+  .cashicon{
+    height: 33px;
+    width: 33px;
+    vertical-align: middle;
+} 
+ .apply{
+    margin-left: 5px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 3vh;
+ }
+ .discounted,.finalprice{
+    text-align: center;
+}
+.finalprice{
+    font-family: "Roboto", serif;
+    font-size: 30px;
+    margin-top: 3vh;
+}
+.discounted{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    margin-top: 10px;
+}
+.discounted,.discounted{
+    text-align: center;
+    color: green;
+    margin-top: 20px;
+}
+.discounted{
+    /* animation: blinker 3s linear infinite; */
+    color: green;
+    font-family: sans-serif;
+}
+@keyframes blinker{
+    50% {
+        opacity: 0;
+    }
+}
+.clearimg{
+    width: 20px;
+    height:25px;
+    vertical-align: center;
+}
+.clear{
+    width:100px;
+    height:30px;
+    margin-top:3.2vh;
+    font-size: 20px;  
+    background-color: #ffffff;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    margin-right:92%;
+    position: absolute;
+    border-color: white;
+    font-family: "Roboto", serif;
+}
+.cashpage{
+    top: 0;
+    left: 26.5%;
+    margin-top: 9%;
+    position: absolute;
+    background-color:#f2f2f2;
+    width:50% ;
+    height:60vh;
+    visibility:hidden;
+    border-radius: 15px;
+    border: rgb(162, 179, 143) 1px solid;
+    position: fixed; 
+}
+.loading{
+    margin-top: 5%;
+    margin-left: 45%;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(103, 105, 105, 0.692);
+    border-bottom-color: #00e5fe;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    visibility:inherit;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .load{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 21%;
+  }
+  .load1{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20%;
+    visibility: hidden;
+  }
+  .load2{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20%;
+    visibility: hidden;
+  }
+.thankyou{
+    position: absolute;
+    visibility: hidden;
+    border: 2px rgb(255, 225, 0) solid;
+    width:80% ;
+    height:50vh;
+    margin-top: 5vh;
+    margin-left: 10%;
+    border-radius: 10px
+}
+.correct{
+    width: 35px;
+    height: 35px;
+}
+.cashheading{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", serif;
+    font-size: 30px;
+}
+.thank{
+    font-family: "Roboto", serif;
+    text-align: center  ;
+    margin-top: 30px;
+    font-size: 25px;
+    color: #333;
+}
+.rating{
+    background-color: white;
+    margin-left: 11.5%;
+    margin-top: 30px;
+    border: 1px solid gray;
+    width: 30vw;
+    border-radius: 5px;
+    height: 17vh;
+}
+.rate{
+    text-align: center;
+    font-family:"Roboto";
+    margin-top: 5px;
+    font-size: 20px;
+}
+#star1,#star2,#star3,#star4,#star5{
+    background-color: white;
+    margin-top: 25px;
+    cursor: pointer;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+#star2,#star3,#star4,#star5{
+margin-left: 15px;
+}
+#starfilled{
+    color: #fbef17;
+    font-size: 30px;
+}
+.closecash{
+    margin-top:9vh;
+    font-size: 20px;
+    width:95px;
+    height: 30px;
+    font-family: "Roboto";
+    border-radius: 5px;
+    background-color: rgb(0, 64, 255);
+    color: white;
+    border: none;
+}
+.gpaypage{
+    top: 0;
+    left: 26.5%;
+    margin-top: 9%;
+    position: absolute;
+    background-color:#f2f2f2;
+    width:50% ;
+    height:60vh;
+    visibility:hidden;
+    border-radius: 15px;
+    border: rgb(162, 179, 143) 1px solid;
+    position: fixed; 
+}
+.scan{
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Roboto";
+}
+.qrcode{
+    margin-top: 4vh;
+    width:20vw;
+    height: 40vh;
+}
+.closegay{
+    font-size: 20px;
+    width:150px;
+    height: 30px;
+    font-family: "Roboto";
+    border-radius: 5px;
+    background-color: rgb(0, 64, 255);
+    color: white;
+    border: none;
+    margin-left: 40%;
+    margin-top:1%;
 }
